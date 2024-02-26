@@ -24,7 +24,7 @@ The project adheres to best coding practices and includes a comprehensive suite 
 
 - **GET /**: Welcome route
 - **POST /users/register**: Register a new user
-- **POST /users/login**: Login a user
+- **POST /users/login**: Log in a user
 - **GET /chats/:userId**: Get chats by user ID
 - **POST /chats/add**: Add a new chat message
 - **GET /openai/generate-openai-response**: Generate a response from OpenAI
