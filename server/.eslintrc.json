@@ -1,0 +1,56 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "extends": ["node", "prettier", "plugin:import/errors", "plugin:import/warnings", "eslint:recommended"],
+  "plugins": ["prettier", "import"],
+  "rules": {
+    "prettier/prettier": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "pathGroups": [
+          {
+            "pattern": "@core/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@server/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@ui/**",
+            "group": "internal"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "es2022": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "parsers": {
+          "@typescript-eslint/parser": [".ts", ".tsx"]
+        }
+      }
+    },
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"]
+  },
+  "ignorePatterns": ["node_modules/"]
+}

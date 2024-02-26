@@ -1,0 +1,22 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 100,
+  "tabWidth": 2,
+  "semi": true,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "useTabs": false,
+  "jsxSingleQuote": true,
+  "endOfLine": "lf",
+  "proseWrap": "preserve",
+  "overrides": [
+    {
+      "files": "*.json",
+      "options": {
+        "printWidth": 200
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-organize-imports"]
+}
